@@ -11,25 +11,12 @@
 		grid-gap: 10px;
 }
 
-.header{
-	grid-area: h;
-	background-color: mediumspringgreen;
-}
-.header img{
-	 width: 70px;
-	 background-color: mediumspringgreen;
-}
+
 .maincontent{
 	margin: 0 auto;
 	width: auto;
 }
 
-.nav {
-	grid-area: n;
-	background-color: chartreuse;
-}
 
-.content{
-	grid-area: c;
-	background-color: cadetblue;
-}
+
+
