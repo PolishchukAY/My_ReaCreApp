@@ -11,12 +11,6 @@
 		grid-gap: 10px;
 }
 
-.app-wrapper-content{
-	grid-area: c;
-	background-color: cadetblue;
-}
-
-
 
 .maincontent{
 	margin: 0 auto;
