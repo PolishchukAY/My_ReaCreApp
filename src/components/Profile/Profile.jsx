@@ -18,9 +18,12 @@ const Profile = (props) => {
     return (
 		<div > 
 			<ProfileInfo/>
-			{/* <MyPosts/> */}
-			{/* <MyPosts postsData={postsData}/> */}
-			<MyPosts postsData={props.postsData}/>
+			{/**********************************************/}
+			{/* <MyPosts/> 
+				<MyPosts postsData={postsData}/> 
+				<MyPosts postsData={props.postsData}/>*/}
+				<MyPosts postsData={props.state.postsData}/>
+			{/**********************************************/}
 		</div>
     )
 }

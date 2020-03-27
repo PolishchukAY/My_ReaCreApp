@@ -3,28 +3,36 @@ import oo from './MyPosts.module.css';
 import Post from './Post/Post.jsx';
 
 const MyPosts = (props) => {
-	{/*
-	let postsData = [
-		{id : 1, message: 'Fist message', likesCount : 15},
-		{id : 2, message: 'Second message', likesCount : 30},
-		{id : 3, message: 'Theard message', likesCount : 50},
-		{id : 4, message: 'Forth message', likesCount : 0}
-	]
-	*/}
-	{/*
-	let postElements = postsData.map ((post)=> <Post message={post.message} likes={post.likesCount}/>); 
-	*/}
-	///////////////////////////////////////////////////////////////////////////////////////
-	let postElements = 
-	props.postsData.map (p => <Post message={p.message} likes={p.likesCount}/>); 
-	///////////////////////////////////////////////////////////////////////////////////////
+	{/***********************************************************************************/}
+	{/*	let postElements = postsData.map ((post)=> <Post message={post.message} likes={post.likesCount}/>); */}
+		let postElements = props.postsData.map (p => <Post message={p.message} likes={p.likesCount}/>); 
+	{/***********************************************************************************/}
+	
+	let newPostElement = React.createRef();	
+	
+	let addPost = () => {
+		debugger;
+		{/* alert('ALERT!!!') */}
+		
+		{/* ТАК ИСПОЛЬЗОВАТЬ НЕЛЬЗЯ!!! */}
+		{/* let text = document.getElementById('new-post').value;   ТАК ИСПОЛЬЗОВАТЬ НЕЛЬЗЯ!!! */}
+			{/**/}
+			let text = newPostElement.current.value;
+			alert(text); 
+			{/**/}
+			
+		}
 	
     return (
 		<div className={oo.postsBlock}>
 			<h3>MyPosts</h3>
 			<div>
-				<div><textarea></textarea></div>
-				<div><button> Add post </button></div>
+				<div>
+					<textarea ref={newPostElement}></textarea>
+				</div>
+				<div>
+					<button onClick={ addPost }> Add post </button>
+				</div>
 				<hr/>
 				<div className={oo.posts}>
 					{/*********************************************/}

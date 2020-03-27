@@ -17,8 +17,9 @@ const Dialogs = (props) => {
 	]
 	*/}
 	///////////////////////////////////////////////////////////////////////////////////////
-	{/*let dialogsElements = dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );*/}
-	let dialogsElements = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );
+	{/*	let dialogsElements = dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );
+		let dialogsElements = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );*/}
+		let dialogsElements = props.state.dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );
 	///////////////////////////////////////////////////////////////////////////////////////
 	{/*
 	let dialogsElements = dialogsData 
@@ -39,12 +40,10 @@ const Dialogs = (props) => {
 		{id : 5, message: 'ChikiBom'}
 	]
 	*/}
-	{/*
-	let messagesElements = messagesData
-		.map(message => <Message message={message.message}/>);
-	*/}
 	//////////////////////////////////////////////////////////////////////////
-	let messagesElements = props.messagesData.map(m => <Message message={m.message}/>);
+	{/*	let messagesElements = messagesData.map(message => <Message message={message.message}/>);
+		let messagesElements = props.messagesData.map(m => <Message message={m.message}/>);*/}
+		let messagesElements = props.state.messagesData.map(m => <Message message={m.message}/>);
 	//////////////////////////////////////////////////////////////////////////
 	return (
 		<div className={oo.dialogs}>
