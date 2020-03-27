@@ -1,26 +1,12 @@
 import React from 'react';
 import oo from './Dialogs.module.css';
 import {NavLink} from "react-router-dom";
-
-
-const DialogItem = (props) =>{
-	let path = "/dialogs/" + props.id;
-	return(
-		<div>
-			<NavLink to={path}>{props.name}</NavLink>
-		</div>	
-	)
-}
-
-const Message = (props) => {
-	return(
-		<div className={oo.message}>{props.message}</div>
-	)
-}
+import Message from './Message/Message.jsx'
+import DialogItem from './DialogItem/DialogItem.jsx'
 
 
 const Dialogs = (props) => {
-	
+	{/*
 	let dialogsData = [
 		{id : 1, name: 'Andrey'},
 		{id : 2, name: 'Sveta'},
@@ -29,8 +15,10 @@ const Dialogs = (props) => {
 		{id : 5, name: 'Vlad'},
 		{id : 6, name: 'Amyr'}
 	]
+	*/}
 	///////////////////////////////////////////////////////////////////////////////////////
-	let dialogsElements = dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );
+	{/*let dialogsElements = dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );*/}
+	let dialogsElements = props.dialogsData.map( d => <DialogItem name={d.name} id={d.id} /> );
 	///////////////////////////////////////////////////////////////////////////////////////
 	{/*
 	let dialogsElements = dialogsData 
@@ -42,6 +30,7 @@ const Dialogs = (props) => {
 		<DialogItem name={dialogsData[2].name} id={dialogsData[2].id}/>
 	]
 	*/}
+	{/*
 	let messagesData = [
 		{id : 1, message: 'Hello everybody'},
 		{id : 2, message: 'Your are fantastic!'},
@@ -49,12 +38,13 @@ const Dialogs = (props) => {
 		{id : 4, message: 'Way'},
 		{id : 5, message: 'ChikiBom'}
 	]
+	*/}
 	{/*
 	let messagesElements = messagesData
 		.map(message => <Message message={message.message}/>);
 	*/}
 	//////////////////////////////////////////////////////////////////////////
-	let messagesElements = messagesData.map(m => <Message message={m.message}/>);
+	let messagesElements = props.messagesData.map(m => <Message message={m.message}/>);
 	//////////////////////////////////////////////////////////////////////////
 	return (
 		<div className={oo.dialogs}>
