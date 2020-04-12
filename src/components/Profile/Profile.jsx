@@ -1,7 +1,8 @@
 import React from 'react';
-import oo from './Profile.module.css'
+
 import MyPosts from './MyPosts/MyPosts.jsx';
 import ProfileInfo from "./ProfileInfo/ProfileInfo.jsx";
+{/*import oo from './Profile.module.css'     string 2*/}
 
 const Profile = (props) => {
 		

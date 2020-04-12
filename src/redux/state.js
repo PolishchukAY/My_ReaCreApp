@@ -30,6 +30,7 @@ let state = {
 	sidebar:{}
 }
 
+window.state = state;
 
 export let addPost = () => {
 	let newPost = {
